@@ -1,0 +1,59 @@
+{
+  "testScores": {
+    "From Scratch Tests": {
+      "FrScTe1": 0,
+      "FrScTe2": 0,
+      "FrScTe3": 0,
+      "FrScTe4": 0,
+      "FrScTe5": 0,
+      "FrScTe6": 0,
+      "FrScTe7": 0,
+      "FrScTe8": 0,
+      "FrScTe9": 0,
+      "FrScTe10": 0,
+      "FrScTe11": 0,
+      "FrScTe12": 0,
+      "FrScTe13": 0,
+      "FrScTe14": 0,
+      "FrScTe15": 0
+    }
+  },
+  "idToTestNameHash": {
+    "FrScTe1": "From Scratch Tests Stack isEmpty - is empty by default",
+    "FrScTe2": "From Scratch Tests Stack push - can add items",
+    "FrScTe3": "From Scratch Tests Stack pop - can remove items",
+    "FrScTe4": "From Scratch Tests Stack getSize - accurately returns the number of elements in the stack",
+    "FrScTe5": "From Scratch Tests Stack peek - can preview the next item",
+    "FrScTe6": "From Scratch Tests Stack values are private",
+    "FrScTe7": "From Scratch Tests Queue isEmpty - is empty by default",
+    "FrScTe8": "From Scratch Tests Queue enqueue - can add items",
+    "FrScTe9": "From Scratch Tests Queue dequeue - can remove items",
+    "FrScTe10": "From Scratch Tests Queue getSize - accurately returns the number of elements in the queue",
+    "FrScTe11": "From Scratch Tests Queue peek - can preview the next item",
+    "FrScTe12": "From Scratch Tests Queue values are private",
+    "FrScTe13": "From Scratch Tests isBalancedParentheses can determine parentheses balance",
+    "FrScTe14": "From Scratch Tests isPalindrome can determine if a string is a palindrome",
+    "FrScTe15": "From Scratch Tests decimalToBinary can convert decmials to binary"
+  },
+  "testNameToIdHash": {
+    "From Scratch Tests Stack isEmpty - is empty by default": "FrScTe1",
+    "From Scratch Tests Stack push - can add items": "FrScTe2",
+    "From Scratch Tests Stack pop - can remove items": "FrScTe3",
+    "From Scratch Tests Stack getSize - accurately returns the number of elements in the stack": "FrScTe4",
+    "From Scratch Tests Stack peek - can preview the next item": "FrScTe5",
+    "From Scratch Tests Stack values are private": "FrScTe6",
+    "From Scratch Tests Queue isEmpty - is empty by default": "FrScTe7",
+    "From Scratch Tests Queue enqueue - can add items": "FrScTe8",
+    "From Scratch Tests Queue dequeue - can remove items": "FrScTe9",
+    "From Scratch Tests Queue getSize - accurately returns the number of elements in the queue": "FrScTe10",
+    "From Scratch Tests Queue peek - can preview the next item": "FrScTe11",
+    "From Scratch Tests Queue values are private": "FrScTe12",
+    "From Scratch Tests isBalancedParentheses can determine parentheses balance": "FrScTe13",
+    "From Scratch Tests isPalindrome can determine if a string is a palindrome": "FrScTe14",
+    "From Scratch Tests decimalToBinary can convert decmials to binary": "FrScTe15"
+  },
+  "humanReadable": {
+    "From Scratch Tests": "0/15",
+    "finalTestScore": "FINAL SCORE: 0/15"
+  }
+}
