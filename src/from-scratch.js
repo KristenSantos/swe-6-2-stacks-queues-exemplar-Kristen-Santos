@@ -65,41 +65,50 @@ class Queue {
 // Question 3: Check for Balanced Parentheses
 const isBalancedParentheses = (inputString) => {
   const stack = new Stack();
+  // Supports multiple types of brackets, but only '(' and ')' are needed for this assignment
   const pairs = { "(": ")", "[": "]", "{": "}" };
 
   for (let char of inputString) {
     if (pairs[char]) {
-      stack.push(char); // Push opening brackets
+      // Push opening bracket onto the stack
+      stack.push(char);
     } else if (char === ")" || char === "]" || char === "}") {
+      // If closing bracket is encountered, check if it matches the last opened one
       if (stack.isEmpty() || pairs[stack.pop()] !== char) {
+        // Unmatched closing bracket or empty stack means unbalanced
         return false;
       }
     }
   }
+  // If stack is empty, all brackets were properly matched
+  return stack.isEmpty();
 
-  return stack.isEmpty(); // Stack should be empty if balanced
+  // Note: The current approach also works for square and curly brackets,
+  // but for this assignment, we only need to check '(' and ')'.
 };
 
 // Question 4: Check if a String is a Palindrome
 const isPalindrome = (inputString) => {
+  // Normalize input: remove non-alphanumeric characters
+  const cleanedString = inputString.replace(/[^a-zA-Z0-9]/g, "");
   const stack = new Stack();
-  const queue = new Queue();
 
-  // Normalize input: remove non-alphanumeric characters and convert to lowercase
-  const cleanedString = inputString.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-
+  // Make a stack
   for (let char of cleanedString) {
+    // Push all characters into the stack
     stack.push(char);
-    queue.enqueue(char);
   }
 
-  // Compare elements from stack and queue
-  while (!stack.isEmpty()) {
-    if (stack.pop() !== queue.dequeue()) {
+  // Iterate through the string:
+  for (let char of cleanedString) {
+    // Pop the top character from the stack
+    if (stack.pop() !== char) {
+      // If the popped character does NOT match the current character, it is not a palindrome
       return false;
     }
   }
 
+  // If you make it to the end of the string, it is a palindrome
   return true;
 };
 
@@ -112,13 +121,16 @@ const decimalToBinary = (num) => {
 
   // Convert decimal to binary by continuously dividing by 2
   while (num > 0) {
+    // Store the remainder (either 0 or 1), which represents the least significant bit (LSB) first
     stack.push(num % 2);
+    // Reduce the number by dividing by 2
     num = Math.floor(num / 2);
   }
 
   // Construct binary string from stack
   let binary = "";
   while (!stack.isEmpty()) {
+    // Read bits in reverse order (from most significant to least significant)
     binary += stack.pop();
   }
 
